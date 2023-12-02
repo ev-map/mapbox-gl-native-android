@@ -8,13 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    defaults:
-      run:
-        working-directory: platform/android
-    env:
-      JOBS: 8
-      BUILDTYPE: Release
-      IS_LOCAL_DEVELOPMENT: false
+    
     steps:
       - uses: actions/checkout@v4
         with:
