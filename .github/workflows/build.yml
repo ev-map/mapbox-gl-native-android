@@ -20,10 +20,8 @@ jobs:
           distribution: "temurin"
           java-version: "8"
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          packages: 'ndk;21.4.7075529'
+      - name: Setup Android NDK
+        run: sdkmanager --install "ndk;21.4.7075529"
 
       - name: Build package
         run: make apackage
