@@ -23,6 +23,9 @@ jobs:
       - uses: nttld/setup-ndk@v1
         with:
           ndk-version: r21e
+          add-to-path: false
 
       - name: Build package
         run: make apackage
+        env:
+          ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
