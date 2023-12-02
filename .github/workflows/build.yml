@@ -20,5 +20,9 @@ jobs:
           distribution: "temurin"
           java-version: "8"
 
+      - uses: nttld/setup-ndk@v1
+        with:
+          ndk-version: r21e
+
       - name: Build package
         run: make apackage
