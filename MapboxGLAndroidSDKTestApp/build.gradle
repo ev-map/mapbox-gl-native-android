@@ -3,6 +3,7 @@ apply from: "${rootDir}/gradle/native-build.gradle"
 
 android {
     compileSdkVersion androidVersions.compileSdkVersion
+    ndkVersion androidVersions.ndkVersion
 
     defaultConfig {
         applicationId "com.mapbox.mapboxsdk.testapp"
