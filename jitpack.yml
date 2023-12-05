@@ -1,2 +1,5 @@
 before_install:
   - yes | sdkmanager --install "ndk;21.4.7075529" "cmake;3.10.2.4988404"
+install:
+  - make apackage
+  - ./gradlew publishToMavenLocal
