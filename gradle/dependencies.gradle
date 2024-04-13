@@ -1,7 +1,7 @@
 ext {
 
     androidVersions = [
-            minSdkVersion    : 14,
+            minSdkVersion    : 21,
             targetSdkVersion : 28,
             compileSdkVersion: 28,
             ndkVersion: "21.4.7075529",
