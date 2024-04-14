@@ -40,7 +40,6 @@ ext.nativeBuild = { nativeTargets ->
                         arguments "-DANDROID_TOOLCHAIN=clang"
                         arguments "-DANDROID_STL=" + stl
                         arguments "-DANDROID_CPP_FEATURES=exceptions"
-                        arguments "-D_FORTIFY_SOURCE=2"
 
                         // Enable ccache if the user has installed it.
                         if (file("/usr/bin/ccache").exists()) {
@@ -49,8 +48,8 @@ ext.nativeBuild = { nativeTargets ->
                             arguments "-DANDROID_CCACHE=/usr/local/bin/ccache"
                         }
 
-                        cFlags "-Qunused-arguments"
-                        cppFlags "-Qunused-arguments"
+                        cFlags "-Qunused-arguments -D_FORTIFY_SOURCE=2"
+                        cppFlags "-Qunused-arguments -D_FORTIFY_SOURCE=2"
 
                         for (target in nativeTargets) {
                             targets target
